@@ -1,0 +1,610 @@
+<head>
+  <title>Inder</title>
+</head>
+
+<body>
+  <div class="container">
+    <form>
+      <h1>Inder</h1>
+      <p class="subtext">
+        Figure out the password to your school account.</p><br><br>
+      <div class="form-group">
+        <input type="number" maxlength="8" min="20000000" max="20999999" id="sid" required="required" />
+        <label for="input" class="control-label">Student ID</label><i class="bar"></i>
+      </div>
+      <div class="form-group">
+        <input type="text" maxlength="3" id="initals" required="required" />
+        <label for="input" class="control-label">Initals</label><i class="bar"></i>
+      </div>
+      <div class="form-group">
+        <select id="month">
+          <optgroup label="January">
+            <option>01</option>
+          </optgroup>
+          <optgroup label="February">
+            <option>02</option>
+          </optgroup>
+          <optgroup label="March">
+            <option>03</option>
+          </optgroup>
+          <optgroup label="April">
+            <option>04</option>
+          </optgroup>
+          <optgroup label="May">
+            <option>05</option>
+          </optgroup>
+          <optgroup label="June">
+            <option>06</option>
+          </optgroup>
+          <optgroup label="July">
+            <option>07</option>
+          </optgroup>
+          <optgroup label="August">
+            <option>08</option>
+          </optgroup>
+          <optgroup label="September">
+            <option>09</option>
+          </optgroup>
+          <optgroup label="October">
+            <option>10</option>
+          </optgroup>
+          <optgroup label="November">
+            <option>11</option>
+          </optgroup>
+          <optgroup label="December">
+            <option>12</option>
+          </optgroup>
+        </select>
+        <label for="select" class="control-label">Month</label><i class="bar"></i>
+      </div>
+      <div class="form-group">
+        <select id="day">
+          <option>01</option>
+          <option>02</option>
+          <option>03</option>
+          <option>04</option>
+          <option>05</option>
+          <option>06</option>
+          <option>07</option>
+          <option>08</option>
+          <option>09</option>
+          <option>10</option>
+          <option>11</option>
+          <option>12</option>
+          <option>13</option>
+          <option>14</option>
+          <option>15</option>
+          <option>16</option>
+          <option>17</option>
+          <option>18</option>
+          <option>19</option>
+          <option>20</option>
+          <option>21</option>
+          <option>22</option>
+          <option>23</option>
+          <option>24</option>
+          <option>25</option>
+          <option>26</option>
+          <option>27</option>
+          <option>28</option>
+          <option>29</option>
+          <option>30</option>
+          <option>31</option>
+        </select>
+        <label for="select" class="control-label">Day</label><i class="bar"></i>
+      </div>
+      <div class="form-group">
+        <select id="year">
+          <optgroup label="2000">
+            <option>00</option>
+          </optgroup>
+          <optgroup label="2001">
+            <option>01</option>
+          </optgroup>
+          <optgroup label="2002">
+            <option>02</option>
+          </optgroup>
+          <optgroup label="2003">
+            <option>03</option>
+          </optgroup>
+          <optgroup label="2004">
+            <option>04</option>
+          </optgroup>
+          <optgroup label="2005">
+            <option>05</option>
+          </optgroup>
+          <optgroup label="2006">
+            <option>06</option>
+          </optgroup>
+          <optgroup label="2007">
+            <option>07</option>
+          </optgroup>
+          <optgroup label="2008">
+            <option>08</option>
+          </optgroup>
+          <optgroup label="2009">
+            <option>09</option>
+          </optgroup>
+          <optgroup label="2010">
+            <option>10</option>
+          </optgroup>
+          <optgroup label="2011">
+            <option>11</option>
+          </optgroup>
+          <optgroup label="2012">
+            <option>12</option>
+          </optgroup>
+          <optgroup label="2013">
+            <option>13</option>
+          </optgroup>
+          <optgroup label="2014">
+            <option>14</option>
+          </optgroup>
+          <optgroup label="2015">
+            <option>15</option>
+          </optgroup>
+          <optgroup label="2016">
+            <option>16</option>
+          </optgroup>
+          <optgroup label="2017">
+            <option>17</option>
+          </optgroup>
+          <optgroup label="2018">
+            <option>18</option>
+          </optgroup>
+          <optgroup label="2019">
+            <option>19</option>
+          </optgroup>
+          <optgroup label="2020">
+            <option>20</option>
+          </optgroup>
+          <optgroup label="2021">
+            <option>21</option>
+          </optgroup>
+          <optgroup label="2022">
+            <option>22</option>
+          </optgroup>
+        </select>
+        <label for="select" class="control-label">Year</label><i class="bar"></i>
+      </div>
+
+      <div class="form-group">
+        <input type="text" maxlength="3" readonly="readonly" id="result" required="required" />
+        <label for="input" class="control-label">Password</label><i class="bar"></i>
+      </div>
+
+
+    </form>
+    <div class="button-container">
+      <button type="button" onclick="getter()" class="button"><span>Generate</span></button>
+    </div>
+  </div>
+
+</body>
+<script>
+function getter() {
+  console.log("The password to your account " + document.getElementById("sid").value + " is " + document.getElementById("initals").value + document.getElementById("month").value + document.getElementById("day").value + document.getElementById("year").value);
+document.getElementById("result").setAttribute("value", document.getElementById("initals").value + document.getElementById("month").value + document.getElementById("day").value + document.getElementById("year").value);
+document.getElementById("result").focus();
+}
+</script>
+<style>
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+body,
+input,
+select,
+textarea,
+body * {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+body::after, body::before,
+input::after,
+input::before,
+select::after,
+select::before,
+textarea::after,
+textarea::before,
+body *::after,
+body *::before {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: -webkit-linear-gradient(top, #f2f2f2, #e6e6e6);
+  background-image: linear-gradient(top, #f2f2f2, #e6e6e6);
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin: 0 0 2em;
+}
+
+.subtext {
+	color: grey;
+	text-align: center;
+}
+
+.container {
+  position: relative;
+  max-width: 40rem;
+  margin: 5rem auto;
+  background: #fff;
+  width: 100%;
+  padding: 3rem 5rem 0;
+  border-radius: 1px;
+}
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+  -webkit-transition: -webkit-transform 0.28s ease-in-out;
+  transition: -webkit-transform 0.28s ease-in-out;
+  transition: transform 0.28s ease-in-out;
+  transition: transform 0.28s ease-in-out, -webkit-transform 0.28s ease-in-out;
+  z-index: -1;
+}
+.container:hover::before {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.button-container {
+  text-align: center;
+}
+
+fieldset {
+  margin: 0 0 3rem;
+  padding: 0;
+  border: none;
+}
+
+.form-radio,
+.form-group {
+  position: relative;
+  margin-top: 2.25rem;
+  margin-bottom: 2.25rem;
+}
+
+.form-inline > .form-group,
+.form-inline > .btn {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.form-help {
+  margin-top: 0.125rem;
+  margin-left: 0.125rem;
+  color: #b3b3b3;
+  font-size: 0.8rem;
+}
+.checkbox .form-help, .form-radio .form-help, .form-group .form-help {
+  position: absolute;
+  width: 100%;
+}
+.checkbox .form-help {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.form-radio .form-help {
+  padding-top: 0.25rem;
+  margin-top: -1rem;
+}
+
+.form-group input {
+  height: 1.9rem;
+}
+.form-group textarea {
+  resize: none;
+}
+.form-group select {
+  width: 100%;
+  font-size: 1rem;
+  height: 1.6rem;
+  padding: 0.125rem 0.125rem 0.0625rem;
+  background: none;
+  border: none;
+  line-height: 1.6;
+  box-shadow: none;
+}
+.form-group .control-label {
+  position: absolute;
+  top: 0.25rem;
+  pointer-events: none;
+  padding-left: 0.125rem;
+  z-index: 1;
+  color: #b3b3b3;
+  font-size: 1rem;
+  font-weight: normal;
+  -webkit-transition: all 0.28s ease;
+  transition: all 0.28s ease;
+}
+.form-group .bar {
+  position: relative;
+  border-bottom: 0.0625rem solid #999;
+  display: block;
+}
+.form-group .bar::before {
+  content: '';
+  height: 0.125rem;
+  width: 0;
+  left: 50%;
+  bottom: -0.0625rem;
+  position: absolute;
+  background: #337ab7;
+  -webkit-transition: left 0.28s ease, width 0.28s ease;
+  transition: left 0.28s ease, width 0.28s ease;
+  z-index: 2;
+}
+.form-group input,
+.form-group textarea {
+  display: block;
+  background: none;
+  padding: 0.125rem 0.125rem 0.0625rem;
+  font-size: 1rem;
+  border-width: 0;
+  border-color: transparent;
+  line-height: 1.9;
+  width: 100%;
+  color: transparent;
+  -webkit-transition: all 0.28s ease;
+  transition: all 0.28s ease;
+  box-shadow: none;
+}
+.form-group input[type="file"] {
+  line-height: 1;
+}
+.form-group input[type="file"] ~ .bar {
+  display: none;
+}
+.form-group select,
+.form-group input:focus,
+.form-group input:valid,
+.form-group input.form-file,
+.form-group input.has-value,
+.form-group textarea:focus,
+.form-group textarea:valid,
+.form-group textarea.form-file,
+.form-group textarea.has-value {
+  color: #333;
+}
+.form-group select ~ .control-label,
+.form-group input:focus ~ .control-label,
+.form-group input:valid ~ .control-label,
+.form-group input.form-file ~ .control-label,
+.form-group input.has-value ~ .control-label,
+.form-group textarea:focus ~ .control-label,
+.form-group textarea:valid ~ .control-label,
+.form-group textarea.form-file ~ .control-label,
+.form-group textarea.has-value ~ .control-label {
+  font-size: 0.8rem;
+  color: gray;
+  top: -1rem;
+  left: 0;
+}
+.form-group select:focus,
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+}
+.form-group select:focus ~ .control-label,
+.form-group input:focus ~ .control-label,
+.form-group textarea:focus ~ .control-label {
+  color: #337ab7;
+}
+.form-group select:focus ~ .bar::before,
+.form-group input:focus ~ .bar::before,
+.form-group textarea:focus ~ .bar::before {
+  width: 100%;
+  left: 0;
+}
+
+.checkbox label,
+.form-radio label {
+  position: relative;
+  cursor: pointer;
+  padding-left: 2rem;
+  text-align: left;
+  color: #333;
+  display: block;
+}
+.checkbox input,
+.form-radio input {
+  width: auto;
+  opacity: 0.00000001;
+  position: absolute;
+  left: 0;
+}
+
+.radio {
+  margin-bottom: 1rem;
+}
+.radio .helper {
+  position: absolute;
+  top: -0.25rem;
+  left: -0.25rem;
+  cursor: pointer;
+  display: block;
+  font-size: 1rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: #999;
+}
+.radio .helper::before, .radio .helper::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0.25rem;
+  width: 1rem;
+  height: 1rem;
+  -webkit-transition: -webkit-transform 0.28s ease;
+  transition: -webkit-transform 0.28s ease;
+  transition: transform 0.28s ease;
+  transition: transform 0.28s ease, -webkit-transform 0.28s ease;
+  border-radius: 50%;
+  border: 0.125rem solid currentColor;
+}
+.radio .helper::after {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  background-color: #337ab7;
+  border-color: #337ab7;
+}
+.radio label:hover .helper {
+  color: #337ab7;
+}
+.radio input:checked ~ .helper::after {
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+}
+.radio input:checked ~ .helper::before {
+  color: #337ab7;
+}
+
+.checkbox {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+.checkbox .helper {
+  color: #999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1rem;
+  height: 1rem;
+  z-index: 0;
+  border: 0.125rem solid currentColor;
+  border-radius: 0.0625rem;
+  -webkit-transition: border-color 0.28s ease;
+  transition: border-color 0.28s ease;
+}
+.checkbox .helper::before, .checkbox .helper::after {
+  position: absolute;
+  height: 0;
+  width: 0.2rem;
+  background-color: #337ab7;
+  display: block;
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  border-radius: 0.25rem;
+  content: '';
+  -webkit-transition: opacity 0.28s ease, height 0s linear 0.28s;
+  transition: opacity 0.28s ease, height 0s linear 0.28s;
+  opacity: 0;
+}
+.checkbox .helper::before {
+  top: 0.65rem;
+  left: 0.38rem;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+  box-shadow: 0 0 0 0.0625rem #fff;
+}
+.checkbox .helper::after {
+  top: 0.3rem;
+  left: 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.checkbox label:hover .helper {
+  color: #337ab7;
+}
+.checkbox input:checked ~ .helper {
+  color: #337ab7;
+}
+.checkbox input:checked ~ .helper::after, .checkbox input:checked ~ .helper::before {
+  opacity: 1;
+  -webkit-transition: height 0.28s ease;
+  transition: height 0.28s ease;
+}
+.checkbox input:checked ~ .helper::after {
+  height: 0.5rem;
+}
+.checkbox input:checked ~ .helper::before {
+  height: 1.2rem;
+  -webkit-transition-delay: 0.28s;
+          transition-delay: 0.28s;
+}
+
+.radio + .radio,
+.checkbox + .checkbox {
+  margin-top: 1rem;
+}
+
+.has-error .legend.legend, .has-error.form-group .control-label.control-label {
+  color: #d9534f;
+}
+.has-error.form-group .form-help,
+.has-error.form-group .helper, .has-error.checkbox .form-help,
+.has-error.checkbox .helper, .has-error.radio .form-help,
+.has-error.radio .helper, .has-error.form-radio .form-help,
+.has-error.form-radio .helper {
+  color: #d9534f;
+}
+.has-error .bar::before {
+  background: #d9534f;
+  left: 0;
+  width: 100%;
+}
+
+.button {
+  position: relative;
+  background: currentColor;
+  border: 1px solid currentColor;
+  font-size: 1.1rem;
+  color: #4f93ce;
+  margin: 3rem 0;
+  padding: 0.75rem 3rem;
+  cursor: pointer;
+  -webkit-transition: background-color 0.28s ease, color 0.28s ease, box-shadow 0.28s ease;
+  transition: background-color 0.28s ease, color 0.28s ease, box-shadow 0.28s ease;
+  overflow: hidden;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+.button span {
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+.button::before {
+  content: '';
+  position: absolute;
+  background: #071017;
+  border: 50vh solid #1d4567;
+  width: 30vh;
+  height: 30vh;
+  border-radius: 50%;
+  display: block;
+  top: 50%;
+  left: 50%;
+  z-index: 0;
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+}
+.button:hover {
+  color: #337ab7;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+}
+.button:active::before, .button:focus::before {
+  -webkit-transition: opacity 0.28s ease 0.364s, -webkit-transform 1.12s ease;
+  transition: opacity 0.28s ease 0.364s, -webkit-transform 1.12s ease;
+  transition: transform 1.12s ease, opacity 0.28s ease 0.364s;
+  transition: transform 1.12s ease, opacity 0.28s ease 0.364s, -webkit-transform 1.12s ease;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+  opacity: 0;
+}
+.button:focus {
+  outline: none;
+}
+</style>
